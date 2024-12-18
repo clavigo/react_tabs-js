@@ -16,7 +16,10 @@ export const App = () => {
 
   return (
     <div className="section">
-      <h1 className="title">Selected tab is {tabSelected}</h1>
+      <h1 className="title">
+        Selected tab is{' '}
+        {tabs.map(tab => (tab.id === activeTabId ? tab.title : ''))}
+      </h1>
 
       <Tabs
         tabs={tabs}
